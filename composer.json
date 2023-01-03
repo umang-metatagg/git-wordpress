@@ -1,0 +1,45 @@
+{
+    "name": "metatagg/wordpress-git",
+    "description": "a test for composer project",
+    "type": "project",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "umang",
+            "email": "umang.metatagg@gmail.com"
+        }
+    ],
+    "require": {
+        "johnpbloch/wordpress": "^6.1",
+        "wpackagist-plugin/wp-migrate-db": "2.*"
+    },
+    "config": {
+        "allow-plugins": {
+            "johnpbloch/wordpress-core-installer": true,
+            "composer/installers": true
+        }
+    },
+    "repositories": [
+        {
+          "type": "composer",
+          "url": "https://wpackagist.org",
+          "only": [
+            "wpackagist-plugin/*",
+            "wpackagist-theme/*"
+          ]
+        }
+      ],
+      "extra": {
+        "installer-paths": {
+            "wordpress/wp-content/mu-plugins/{$name}/": [
+                "type:wordpress-muplugin"
+            ],
+           "wordpress/wp-content/plugins/{$name}/": [
+                "type:wordpress-plugin"
+            ],
+           "wordpress/wp-content/themes/{$name}/": [
+                "type:wordpress-theme"
+            ]
+        }
+    }
+}
