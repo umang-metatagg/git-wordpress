@@ -56,4 +56,5 @@
 			);
 			?>
 		</nav><!-- #site-navigation -->
+		<a href="#1" class="button">This is button</a>
 	</header><!-- #masthead -->

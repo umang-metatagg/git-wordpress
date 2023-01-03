@@ -52,6 +52,8 @@ get_header();
 
 	</main><!-- #main -->
 
+	<h1>This is footer cta</h1>
+
 <?php
 get_sidebar();
 get_footer();
